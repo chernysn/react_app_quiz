@@ -39,13 +39,27 @@ function App() {
       const newPoints =
         correct === result ? prevCountPoints + 10 : prevCountPoints;
       if (newPoints > prevCountPoints) {
-        setFeedbackMessage("Correct!");
+        setFeedbackMessage(
+          <img
+            width="50"
+            height="50"
+            src="https://img.icons8.com/external-nawicon-detailed-outline-nawicon/60/F1F8FF/external-like-seo-and-marketing-nawicon-detailed-outline-nawicon.png"
+            alt=""
+          />
+        );
       } else {
-        setFeedbackMessage("Incorrect!");
+        setFeedbackMessage(
+          <img
+            width="50"
+            height="50"
+            src="https://img.icons8.com/external-obvious-line-kerismaker/60/F1F8FF/external-business-business-marketing-line-beshi-line-kerismaker-38.png"
+            alt=""
+          />
+        );
       }
       setTimeout(() => {
         setFeedbackMessage("");
-      }, 1000);
+      }, 1200);
 
       return newPoints;
     });
