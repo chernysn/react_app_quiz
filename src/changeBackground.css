@@ -1,0 +1,7 @@
+.testBackground {
+  width: 30em;
+  height: 100%;
+  padding: 2em;
+  font-size: 15px;
+  background-color: rgb(23, 198, 23);
+}
