@@ -1,28 +1,34 @@
-import ReactDOM from "react-dom/client";
-import { Navbar, Nav } from "react-bootstrap";
-import { LinkContainer } from "react-router-bootstrap";
-import { Routes, Route, Router } from "react-router-dom";
+import "./Navbar.css";
 import { Link } from "react-router-dom";
-import Main from "./Main";
 
-function NavBar() {
+function Navigation() {
   return (
     <>
-      <Router>
-        <nav>
-          <ul>
+      <div className="navigation">
+        <ul>
+          <Link to="/" style={{ textDecoration: "none" }}>
             <li>
-              <Link to="/"></Link>
+              Art Quiz{" "}
+              <img
+                src="https://img.icons8.com/ios-glyphs/30/ffffff/long-arrow-right.png"
+                alt="long-arrow-right"
+              />
             </li>
-          </ul>
-        </nav>
+          </Link>
 
-        <Routes>
-          <Route path="/" element={<Main />}></Route>
-        </Routes>
-      </Router>
+          <Link to="/about" style={{ textDecoration: "none" }}>
+            <li>
+              About{" "}
+              <img
+                src="https://img.icons8.com/ios-glyphs/30/ffffff/long-arrow-right.png"
+                alt="long-arrow-right"
+              />
+            </li>
+          </Link>
+        </ul>
+      </div>
     </>
   );
 }
 
-export default NavBar;
+export default Navigation;
